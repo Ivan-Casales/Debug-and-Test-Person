@@ -16,6 +16,12 @@ namespace UnitTestAndDebug
         {
             long tempOut;
 
+            if (id == null)
+            {
+                // Formato de cédula de identidad inválido para casos null
+                return false;
+            }
+
             // Quitar puntos y guiones
             id = id.Replace(".", "");
             id = id.Replace("-", "");
